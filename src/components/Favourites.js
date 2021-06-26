@@ -4,7 +4,7 @@ const Favourites = ({ favs, setFav, removeFromFavourites, displayShip }) => {
 
 
   return (
-    <div>
+    <div className="favourites">
       {favs.length > 0 &&
         favs.map((fav) => (
           <>

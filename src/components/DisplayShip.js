@@ -1,14 +1,18 @@
-
 import React, { useEffect, useState } from "react";
 
-export default function DisplayShips({ getShipNames, displayShip, shipNames, ship, addToFavourites }) {
-
+export default function DisplayShips({
+  getShipNames,
+  displayShip,
+  shipNames,
+  ship,
+  addToFavourites,
+}) {
   return (
     <>
       {!ship && !shipNames && <h3>Loading</h3>}
-      <h1>SpaceX Ships</h1>
+
       {shipNames && (
-        <ul>
+        <ul className="shipNames">
           {shipNames.map((shipName) => (
             // <li key={shipName.name}></li>
             <li key={shipName.name} onClick={() => displayShip(shipName.name)}>
@@ -19,10 +23,15 @@ export default function DisplayShips({ getShipNames, displayShip, shipNames, shi
       )}
       {ship && (
         <>
-          <div>
-            <p>{ship.name}</p>
-          </div>
-          <div>
+          <div className="displayShip">
+            <h3>{ship.name}</h3>
+            <p>Year made: {ship.year_built}</p>
+            <p>Home Port: {ship.home_port}</p>
+            <p>Type: {ship.type}</p>
+            <p>Weight: {ship.mass_kg} kg</p>
+            <p>Roles:</p>
+            
+            <img src={ship.img} alt="" />
             <button onClick={getShipNames}>Back</button>
             <button onClick={addToFavourites}>Add to Favourites</button>
           </div>

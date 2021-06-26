@@ -1,0 +1,25 @@
+.container{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+      "header header header header"
+      "main main main sidebar"
+      "footer footer footer footer";
+}
+
+.displayShip{
+    grid-area: main;
+    background-color: pink;
+
+}
+
+.shipNames{
+    grid-area: main;
+    background-color: greenyellow;
+}
+
+.favourites{
+    background-color:lightblue;
+    grid-area: sidebar;
+}
