@@ -22,7 +22,6 @@ export default function DisplayShips({
         </ul>
       )}
       {ship && (
-        <>
           <div className="displayShip">
             <h3>{ship.name}</h3>
             <p>Year made: {ship.year_built}</p>
@@ -35,7 +34,6 @@ export default function DisplayShips({
             <button onClick={getShipNames}>Back</button>
             <button onClick={addToFavourites}>Add to Favourites</button>
           </div>
-        </>
       )}
     </>
   );
