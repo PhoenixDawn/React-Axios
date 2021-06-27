@@ -28,11 +28,18 @@ export default function DisplayShips({
             <p>Home Port: {ship.home_port}</p>
             <p>Type: {ship.type}</p>
             <p>Weight: {ship.mass_kg} kg</p>
-            <p>Roles:</p>
-            
-            <img src={ship.img} alt="" />
+            <p>Roles:</p>   
+            {ship.roles.map((role) => (
+              <>
+                <p>{role}</p>
+              </>
+            ))}      
+            <img src={ship.img} alt={ship.name} />
+            <div>
+
             <button onClick={getShipNames}>Back</button>
             <button onClick={addToFavourites}>Add to Favourites</button>
+            </div>
           </div>
       )}
     </>
