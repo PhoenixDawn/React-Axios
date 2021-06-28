@@ -12,28 +12,58 @@ img{
     width: 300px;
 }
 
+li{
+    cursor:pointer;
+}
+
+.favImg{
+    height: 150px;
+    width: 250px;
+}
+
+.favourite-card{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+
 .container{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: 
       "header header header header"
-      "main main main sidebar"
+      "main main sidebar sidebar"
       "footer footer footer footer";
+      
 }
 
 .displayShip{
     grid-area: main;
     background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
 
 }
 
 .shipNames{
     grid-area: main;
     background-color: greenyellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
 }
 
 .favourites{
     background-color:lightblue;
     grid-area: sidebar;
+}
+
+button{
+    cursor: pointer;
 }

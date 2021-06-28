@@ -31,17 +31,20 @@ function App() {
   };
 
   const addToFavourites = () => {
-    if (favourites.includes(ship.name)) {
-      {
+    let flag = true;
+    favourites.forEach((favShip) => {
+      if (favShip.name === ship.name) {
         alert("You can't add this twice!");
+        flag = false;
       }
-    } else {
-      setFavourites(favourites.concat(ship.name));
+    });
+    if (flag) {
+      setFavourites(favourites.concat(ship));
     }
   };
 
-  const removeFromFavourites = (name) => {
-    setFavourites(favourites.filter((fav) => fav != name));
+  const removeFromFavourites = (ship) => {
+    setFavourites(favourites.filter((fav) => fav !== ship));
   };
 
   useEffect(getShipNames, []);

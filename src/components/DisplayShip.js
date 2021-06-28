@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 export default function DisplayShips({
   getShipNames,
@@ -34,7 +34,7 @@ export default function DisplayShips({
                 <p>{role}</p>
               </>
             ))}      
-            <img src={ship.img} alt={ship.name} />
+            <img src={ship.image} alt={ship.name} />
             <div>
 
             <button onClick={getShipNames}>Back</button>
